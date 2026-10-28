@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# SQLite Databases & temporary files
+backend/data/*.db
+*.log
+.pytest_cache/
+
+# Environment Variables
+.env

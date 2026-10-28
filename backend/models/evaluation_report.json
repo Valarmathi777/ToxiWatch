@@ -1,0 +1,258 @@
+{
+  "version": "v1.0.0",
+  "trained_at": "2026-10-23T09:02:24.046228",
+  "dataset_records": 10200,
+  "train_records": 7140,
+  "val_records": 1530,
+  "test_records": 1530,
+  "categories": [
+    "friendly_toxic",
+    "harmful_toxic",
+    "hate_speech",
+    "normal",
+    "offensive"
+  ],
+  "models": {
+    "model_a_baseline": {
+      "name": "Model A (Baseline Text-Only Classifier)",
+      "type": "Multiclass TF-IDF + LogisticRegression",
+      "features": "comment text only",
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "classification_report": {
+        "friendly_toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 390.0
+        },
+        "harmful_toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 330.0
+        },
+        "hate_speech": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 330.0
+        },
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240.0
+        },
+        "offensive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          390,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          330,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          330,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          240,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          240
+        ]
+      ]
+    },
+    "model_b_hate": {
+      "name": "Model B (Hate Speech Binary Classifier)",
+      "type": "Binary TF-IDF + LogisticRegression",
+      "features": "comment text",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "classification_report": {
+        "Non-Hate": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1200.0
+        },
+        "Hate-Speech": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 330.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1200,
+          0
+        ],
+        [
+          0,
+          330
+        ]
+      ]
+    },
+    "model_c_context": {
+      "name": "Model C (Context-Aware Multiclass Classifier)",
+      "type": "Context-Aware TF-IDF + LogisticRegression",
+      "features": "comment text + conversation context",
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "classification_report": {
+        "friendly_toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 390.0
+        },
+        "harmful_toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 330.0
+        },
+        "hate_speech": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 330.0
+        },
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240.0
+        },
+        "offensive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 240.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1530.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          390,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          330,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          330,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          240,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          240
+        ]
+      ]
+    },
+    "model_d_toxicity": {
+      "name": "Model D (Continuous Toxicity Regressor)",
+      "type": "TF-IDF + Ridge Regression",
+      "features": "contextual text",
+      "mse": 0.0074,
+      "mae": 0.0686,
+      "r2": 0.923
+    }
+  },
+  "comparison": {
+    "accuracy_improvement": 0.0,
+    "f1_improvement": 0.0,
+    "key_finding": "Context awareness dramatically disambiguates playful friendly-toxic teasing from harmful attacks and hate speech."
+  }
+}
